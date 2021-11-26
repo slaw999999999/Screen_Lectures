@@ -1,13 +1,14 @@
 import pyautogui
 import time
 import datetime
-import os
+import subprocess
 
-for y,x in enumerate(range(180)):
+x = input("ile screen'ów chcesz zrobić? (1 screen jest robiony co 30 sekund)")
+
+for y,x in enumerate(range(int(x))):
     pyautogui.screenshot(f'screen{y}.png')
     date = (datetime.datetime.today()).strftime('%H:%M:%S')
     print(f"Zrobiłem {y+1} screen o godzinie {date}")
     time.sleep(30)
 
-#Brute force way to exit from Microsoft Teams
-os.system("shutdown /r /s 1")
+subprocess.run(["shutdown", "-s"])
