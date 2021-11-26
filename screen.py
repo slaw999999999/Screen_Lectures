@@ -9,4 +9,5 @@ for y,x in enumerate(range(180)):
     print(f"Zrobiłem {y+1} screen o godzinie {date}")
     time.sleep(30)
 
+#Brute force way to exit from Microsoft Teams
 os.system("shutdown /r /s 1")
